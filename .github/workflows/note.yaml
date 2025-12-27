@@ -12,7 +12,7 @@ jobs:
   test:
   runs-on: ubuntu-latest
   steps:
-      - name: Echo theme
+   - name: Echo theme
         run: echo "THEME=${{ github.event.inputs.theme }}"
 jobs:
   test:
