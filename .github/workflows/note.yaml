@@ -1,11 +1,16 @@
-name: Test Workflow
+name: Note Workflow
 
 on:
   workflow_dispatch:
+    inputs:
+      theme:
+        description: '記事テーマ'
+        required: true
+        type: string
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello
-        run: echo "YAML OK"
+      - name: Echo theme
+        run: echo "THEME=${{ github.event.inputs.theme }}"
