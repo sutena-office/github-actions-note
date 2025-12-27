@@ -1,13 +1,11 @@
-import fs from 'fs';
+name: Test Workflow
 
-const theme = process.env.THEME || '';
-const target = process.env.TARGET || '';
+on:
+  workflow_dispatch:
 
-fs.mkdirSync('.note-artifacts', { recursive: true });
-
-const text = `
-theme: ${theme}
-target: ${target}
-`;
-
-fs.writeFileSync('.note-artifacts/research.md', text);
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello
+        run: echo "YAML OK"
