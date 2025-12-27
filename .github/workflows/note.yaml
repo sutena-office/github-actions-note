@@ -70,7 +70,7 @@ jobs:
         run: |
            npm init -y
            npm install ai @ai-sdk/anthropic
-
+           
       - name: Research with Anthropic SDK
         run: |
           cat > research.mjs <<'EOF'
